@@ -12,9 +12,9 @@ use yii\web\Controller;
 class PostDetailController extends Controller
 {
    
-    public function actionPost($id)
+    public function actionPost(Posts  $posts)
     {
-        $post = Posts::findOne(['id'=>$id]);
+        $post = Posts::findOne(['posts'=>$posts]);
 
         return $this->render('post-detail', ['post'=>$post]);
 
